@@ -19,7 +19,7 @@ module "efs_csi_storage" {
 
   tags = {
     "cluster" = var.cluster_name
-    "pipeline" = "lab-platform-eks-core-services"
+    "pipeline" = "cohort-base-platform-eks-core-services"
   }
 }
 
