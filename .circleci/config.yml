@@ -107,6 +107,9 @@ jobs:
       - run:
           name: deploy cluster-autoscaler
           command: bash scripts/deploy_cluster_autoscaler.sh << parameters.cluster >>
+      - run:
+          name: deploy kubecost cloud agent
+          command: bash scripts/deploy_kubecost_cloud.sh << parameters.cluster >>
 
       # even with reverting to the v17 eks terraform module, efs-csi is still failing with error:
       # failed to provision volume with StorageClass "efs-csi-test-storage-class": rpc error: code = Unauthenticated desc = Access Denied.

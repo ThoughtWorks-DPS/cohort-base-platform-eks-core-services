@@ -4,6 +4,8 @@
     "aws_account_id": "{{ op://empc-lab/cohort-base-aws-1/aws-account-id }}",
 
     "cluster_name": "nonprod-us-east-2",
+    "kubecost_cluster_id": "CDI201-Base",
+    "kubecost_network_costs_enabled": "true",
 
     "cluster_autoscaler_version": "v1.22.2",
     "metrics_server_version": "v0.6.1",
