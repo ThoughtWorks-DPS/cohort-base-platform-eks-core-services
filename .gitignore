@@ -5,3 +5,4 @@ kubeconfig_*
 .python-version
 Pipfile.lock
 datadog/values.yaml
+kubeconfig

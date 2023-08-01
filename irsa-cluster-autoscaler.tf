@@ -1,6 +1,6 @@
 module "cluster_autoscaler_irsa" {
   source                = "terraform-aws-modules/iam/aws//modules/iam-role-for-service-accounts-eks"
-  version               = "~> 5.1.0"
+  version               = "~> 5.28.0"
 
   role_name             = "${var.cluster_name}-cluster-autoscaler"
   attach_cluster_autoscaler_policy = true
@@ -11,4 +11,6 @@ module "cluster_autoscaler_irsa" {
       namespace_service_accounts = ["kube-system:cluster-autoscaler"]
     }
   }
+
+  cluster_autoscaler_cluster_names = [ var.cluster_name ]
 }
